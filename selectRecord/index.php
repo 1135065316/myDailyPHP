@@ -17,14 +17,13 @@ if ($conn->connect_error) {
 $sql = "SELECT * FROM my_daily where record_time=".$record_time;
 $result = $conn->query($sql);
  
-// if ($result->num_rows > 0) {
-// 	$arr=array();
-//     // 输出数据
-//     while($row = $result->fetch_assoc()) {
-// 		$arr[] = $row;
-//     }
-// 	echo json_encode($arr);
-// } else {
-//     echo "0 结果";
-// }
-echo $result;
+if ($result->num_rows > 0) {
+	$arr=array();
+    // 输出数据
+    while($row = $result->fetch_assoc()) {
+		$arr[] = $row;
+    }
+	echo json_encode($arr);
+} else {
+    echo "0 结果";
+}

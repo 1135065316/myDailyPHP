@@ -5,7 +5,6 @@ $password = "root";
 $dbname = 'mysql';
 
 $record_time = $_GET["record_time"];
-echo $record_time;
 $is_survival = $_GET["is_survival"];
  
 // 创建连接
