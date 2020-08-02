@@ -16,7 +16,7 @@ if ($conn->connect_error) {
 }
 
 $sql = "INSERT INTO my_daily (record_time, is_survival)
-VALUES (".$record_time.", ".$is_survival.")";
+VALUES ('".$record_time."', ".$is_survival.")";
 
 if ($conn->query($sql) === TRUE) {
 	echo "新记录插入成功";
