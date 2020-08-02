@@ -25,5 +25,5 @@ if ($result->num_rows > 0) {
     }
 	echo json_encode($arr);
 } else {
-    echo "0 结果";
+    echo '';
 }
