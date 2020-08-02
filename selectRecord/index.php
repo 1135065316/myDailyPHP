@@ -14,7 +14,7 @@ if ($conn->connect_error) {
     die("连接失败: " . $conn->connect_error);
 }
 
-$sql = "SELECT * FROM my_daily where record_time=".$record_time;
+$sql = "SELECT * FROM my_daily where record_time='".$record_time."'";
 $result = $conn->query($sql);
  
 if ($result->num_rows > 0) {
